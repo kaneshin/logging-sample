@@ -21,6 +21,7 @@ func init() {
 	V1Route.Middlewares = []negroni.Handler{
 		negroni.NewLogger(),
 		negroni.HandlerFunc(ctrl.AuthMiddleware),
+		negroni.HandlerFunc(ctrl.EventMiddleware),
 	}
 }
 

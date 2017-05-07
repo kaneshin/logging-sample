@@ -5,6 +5,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/kaneshin/logging-sample/src/layer/core"
 	"github.com/kaneshin/logging-sample/src/track"
 )
 
@@ -25,14 +26,27 @@ func AuthMiddleware(rw http.ResponseWriter, r *http.Request, next http.HandlerFu
 		return
 	}
 
+	t := strings.Fields(token)[1]
+
+	ctx := r.Context()
+	ctx = core.ContextWithToken(ctx, t)
+	ctx = core.ContextWithEvent(ctx, &track.EventData{
+		Category: "Auth",
+		Action:   "Login",
+		Value:    t,
+		Time:     time.Now(),
+	})
+
+	next(rw, r.WithContext(ctx))
+}
+
+func EventMiddleware(rw http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	next(rw, r)
 
 	go func() {
-		track.EventLog(track.EventData{
-			Category: "Auth",
-			Action:   "Login",
-			Value:    strings.Fields(token)[1],
-			Time:     time.Now(),
-		})
+		list := core.ContextEvent(r.Context())
+		for _, d := range list {
+			track.EventLog(*d)
+		}
 	}()
 }
