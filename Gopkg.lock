@@ -1,0 +1,31 @@
+memo = "4df290509af167b423fea404b4299a80170093bdb77bba49f8be6c8fe63e1604"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/codegangsta/negroni"
+  packages = ["."]
+  revision = "1d8981a52d6bda4467a9faacf3fdddd38222dfc4"
+
+[[projects]]
+  name = "github.com/gorilla/context"
+  packages = ["."]
+  revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
+  version = "v1.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/gorilla/mux"
+  packages = ["."]
+  revision = "4c1c3952b7d9d0a061a3fa7b36fd373ba0398ebc"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  revision = "a91eba7f97777409bc2c443f5534d41dd20c5720"
+
+[[projects]]
+  branch = "v1"
+  name = "github.com/unrolled/render"
+  packages = ["."]
+  revision = "50716a0a853771bb36bfce61a45cdefdb98c2e6e"
