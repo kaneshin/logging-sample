@@ -33,6 +33,7 @@ func printSchema(st interface{}) {
 
 	var list []interface{}
 	for _, fs := range is {
+		// TODO(kaneshin) nested fields
 		t := struct {
 			Name string `json:"name"`
 			Type string `json:"type"`
