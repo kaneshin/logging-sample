@@ -47,5 +47,5 @@ func printSchema(st interface{}) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(string(b))
+	fmt.Fprintln(os.Stdout, string(b))
 }

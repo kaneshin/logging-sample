@@ -1,0 +1,22 @@
+[
+  {
+    "name": "category",
+    "type": "STRING"
+  },
+  {
+    "name": "action",
+    "type": "STRING"
+  },
+  {
+    "name": "label",
+    "type": "STRING"
+  },
+  {
+    "name": "value",
+    "type": "STRING"
+  },
+  {
+    "name": "time",
+    "type": "TIMESTAMP"
+  }
+]

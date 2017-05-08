@@ -1,0 +1,14 @@
+[
+  {
+    "name": "level",
+    "type": "STRING"
+  },
+  {
+    "name": "message",
+    "type": "STRING"
+  },
+  {
+    "name": "time",
+    "type": "TIMESTAMP"
+  }
+]
