@@ -11,7 +11,7 @@ import (
 
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/websocket"
-	"github.com/kaneshin/logging-sample/src/applayer/ctrl"
+	"github.com/kaneshin/logging-sample/src/app/ctrl"
 	"github.com/kaneshin/logging-sample/src/track"
 )
 
