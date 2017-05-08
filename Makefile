@@ -84,3 +84,13 @@ ifndef HAVE_GOCOV
 	@echo "Installing gocov"
 	@go get -u github.com/axw/gocov/gocov
 endif
+
+.PHONY: fluentd tail-app-log tail-event-log
+fluentd:
+	@fluentd -c ./misc/fluent/fluent.conf
+
+tail-app-log:
+	@tail -f /tmp/logging-sample.app.log | fluent-cat logging-sample.app.log
+
+tail-event-log:
+	@tail -f /tmp/logging-sample.event.log | fluent-cat logging-sample.event.log
