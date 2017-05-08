@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kaneshin/logging-sample/src/layer/core"
+	"github.com/kaneshin/logging-sample/src/applayer/core"
 	"github.com/kaneshin/logging-sample/src/track"
 )
 

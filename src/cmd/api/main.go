@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/kaneshin/logging-sample/src/layer/ctrl"
-	"github.com/kaneshin/logging-sample/src/layer/ctrl/ctrlapi"
+	"github.com/kaneshin/logging-sample/src/applayer/ctrl"
+	"github.com/kaneshin/logging-sample/src/applayer/ctrl/ctrlapi"
 )
 
 var addr = flag.String("addr", ":8080", "http service address")

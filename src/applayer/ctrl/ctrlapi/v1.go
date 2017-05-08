@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/codegangsta/negroni"
-	"github.com/kaneshin/logging-sample/src/layer/ctrl"
+	"github.com/kaneshin/logging-sample/src/applayer/ctrl"
 	"github.com/kaneshin/logging-sample/src/track"
 )
 
