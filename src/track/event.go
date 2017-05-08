@@ -21,11 +21,11 @@ func init() {
 }
 
 type EventData struct {
-	Category string      `json:"category"`
-	Action   string      `json:"action"`
-	Label    string      `json:"label"`
-	Value    interface{} `json:"value"`
-	Time     time.Time   `json:"time"`
+	Category string    `json:"category"`
+	Action   string    `json:"action"`
+	Label    string    `json:"label"`
+	Value    string    `json:"value"`
+	Time     time.Time `json:"time"`
 }
 
 func (d EventData) String() string {
